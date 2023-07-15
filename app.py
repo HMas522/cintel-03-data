@@ -24,7 +24,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 app_ui = ui.page_navbar(
-    shinyswatch.theme.cosmo(),
+    shinyswatch.theme.superhero(),
     ui.nav(
         "Home",
         ui.layout_sidebar(
