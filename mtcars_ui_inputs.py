@@ -40,6 +40,10 @@ def get_mtcars_inputs():
             ui.output_table("cars_table"),
         ),
         ui.tags.hr(),
+        ui.tags.section(
+        ui.input_checkbox("Number_Cylinders_6", "6", value=True)
+        ),
+        ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),
     )

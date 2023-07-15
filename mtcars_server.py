@@ -50,7 +50,7 @@ def get_mtcars_server_functions(input, output, session):
             y="mpg",
         )
         return plt
-
+    
     # return a list of function names for use in reactive outputs
     return [
         mtcars_table,
