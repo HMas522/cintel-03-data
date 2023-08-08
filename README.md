@@ -22,6 +22,11 @@ We'll work with two datasets:
 - [Penguins](https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/)
 - [MT Cars](https://shinylive.io/py/examples/#read-local-csv) [learn more](https://www.stat.ubc.ca/~gavin/STEPIBookNewStyle/course/num/Day3/Session3.2.pdf)
 
+## Project 7
+- [Restaurant Tips](https://github.com/mwaskom/seaborn-data/blob/master/tips.csv)
+- [Health Care](https://github.com/mwaskom/seaborn-data/blob/master/healthexp.csv)
+
+
 -----
 
 ## Copy This Repository

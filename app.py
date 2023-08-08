@@ -45,10 +45,10 @@ app_ui = ui.page_navbar(
                 ui.tags.hr(),
                 ui.tags.ul(
                     ui.tags.li(
-                        "To explore MotorTrend Car dataset, click the 'MT_Cars' tab."
+                        "To explore Restaurant Tip dataset, click the 'Tips' tab."
                     ),
                     ui.tags.li(
-                        "To explore the Penguins Dataset, click the 'Penguins' tab."
+                        "To explore the Health Care Dataset, click the 'Health_Care' tab."
                     ),
                 ),
                 ui.tags.hr(),
@@ -61,7 +61,7 @@ app_ui = ui.page_navbar(
         ),
     ),
     ui.nav(
-        "MT_Cars",
+        "Tips",
         ui.layout_sidebar(
             get_mtcars_inputs(),
             get_mtcars_outputs(),

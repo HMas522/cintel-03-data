@@ -22,7 +22,7 @@ def get_penguins_server_functions(input, output, session):
     """Define functions to create UI outputs."""
 
     path_to_data = (
-        pathlib.Path(__file__).parent.joinpath("data").joinpath("penguins.xlsx")
+        pathlib.Path(__file__).parent.joinpath("data").joinpath("healthexp.csv")
     )
     original_df = pd.read_excel(path_to_data)
     total_count = len(original_df)
