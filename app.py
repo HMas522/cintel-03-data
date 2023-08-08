@@ -11,13 +11,13 @@ Each Shiny app has two parts:
 import shinyswatch
 from shiny import App, ui, render
 
-from mtcars_server import get_mtcars_server_functions
-from mtcars_ui_inputs import get_mtcars_inputs
-from mtcars_ui_outputs import get_mtcars_outputs
+from tips_server import get_tips_server_functions
+from tips_ui_inputs import get_tips_inputs
+from tips_ui_outputs import get_tips_outputs
 
-from penguins_server import get_penguins_server_functions
-from penguins_ui_inputs import get_penguins_inputs
-from penguins_ui_outputs import get_penguins_outputs
+from health_care_server import get_health_care_server_functions
+from health_care_ui_inputs import get_health_care_inputs
+from health_care_ui_outputs import get_health_care_outputs
 
 from util_logger import setup_logger
 
@@ -63,15 +63,15 @@ app_ui = ui.page_navbar(
     ui.nav(
         "Tips",
         ui.layout_sidebar(
-            get_mtcars_inputs(),
-            get_mtcars_outputs(),
+            get_tips_inputs(),
+            get_tips_outputs(),
         ),
     ),
     ui.nav(
-        "Penguins",
+        "Health Care",
         ui.layout_sidebar(
-            get_penguins_inputs(),
-            get_penguins_outputs(),
+            get_health_care_inputs(),
+            get_health_care_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/HMas522")),
@@ -101,8 +101,8 @@ def server(input, output, session):
         language_string = f"You like {answer}. That takes {count} characters"
         return language_string
 
-    get_mtcars_server_functions(input, output, session)
-    get_penguins_server_functions(input, output, session)
+    get_tips_server_functions(input, output, session)
+    get_health_care_server_functions(input, output, session)
 
 
 app = App(app_ui, server)

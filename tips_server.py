@@ -26,19 +26,19 @@ def get_mtcars_server_functions(input, output, session):
 
     @output
     @render.table
-    def mtcars_table():
+    def tips_table():
         return original_df
 
     @output
     @render.text
-    def mtcars_record_count_string():
+    def tips_record_count_string():
         message = f"Showing {total_count} records"
         logger.debug(f"filter message: {message}")
         return message
 
     @output
     @render.plot
-    def mtcars_plot():
+    def tips_plot():
         """
         Use Seaborn to make a quick scatterplot.
         Provide a pandas DataFrame and the names of the columns to plot.
@@ -53,7 +53,7 @@ def get_mtcars_server_functions(input, output, session):
     
     # return a list of function names for use in reactive outputs
     return [
-        mtcars_table,
-        mtcars_record_count_string,
-        mtcars_plot,
+        tips_table,
+        tips_record_count_string,
+        tips_plot,
     ]
