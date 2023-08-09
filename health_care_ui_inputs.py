@@ -15,7 +15,7 @@ from shiny import ui
 
 def get_penguins_inputs():
     return ui.panel_sidebar(
-        ui.h2("Health CAre Interaction"),
+        ui.h2("Health Care Interaction"),
         ui.tags.hr(),
         ui.input_slider(
             "Life_Expectancy_RANGE",
@@ -31,7 +31,6 @@ def get_penguins_inputs():
         ui.input_checkbox("HealthCare_Country_Japan", "USA", value=True),
         ui.input_checkbox("HealthCare_Country_Canada", "Canada", value=True
         ),
-        
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),

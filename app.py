@@ -90,7 +90,7 @@ def server(input, output, session):
     @render.text
     def welcome_output():
         user = input.name_input()
-        welcome_string = f"Welcome {user}!"
+        welcome_string = f"Greetings {user}!"
         return welcome_string
 
     @output

@@ -51,7 +51,7 @@ def get_health_care_server_functions(input, output, session):
     @output
     @render.text
     def health_care_filtered_record_count_string():
-        logger.debug("Triggered penguin_filter_record_count_string")
+        logger.debug("Triggered health_care_filter_record_count_string")
         df = original_df.copy()
         input_Life_Expectancy_range = input.Life_Expectancy_range()
         input_min = input_Life_Expectancy_range[0]
@@ -139,7 +139,7 @@ def get_health_care_server_functions(input, output, session):
             data=df,
             x="Spending_USD",
             y="Life_Expectancy",
-            hue="health_care",
+            hue="Country",
             style="Year",
         )
         return plt
