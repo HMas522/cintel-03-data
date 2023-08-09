@@ -15,9 +15,9 @@ from tips_server import get_tips_server_functions
 from tips_ui_inputs import get_tips_inputs
 from tips_ui_outputs import get_tips_outputs
 
-from health_care_server import get_health_care_server_functions
-from health_care_ui_inputs import get_health_care_inputs
-from health_care_ui_outputs import get_health_care_outputs
+from healthcare_server import get_healthcare_server_functions
+from healthcare_ui_inputs import get_healthcare_inputs
+from health_are_ui_outputs import get_healthcare_outputs
 
 from util_logger import setup_logger
 
@@ -70,8 +70,8 @@ app_ui = ui.page_navbar(
     ui.nav(
         "Health Care",
         ui.layout_sidebar(
-            get_health_care_inputs(),
-            get_health_care_outputs(),
+            get_healthcare_inputs(),
+            get_healthcare_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/HMas522")),
@@ -102,7 +102,7 @@ def server(input, output, session):
         return language_string
 
     get_tips_server_functions(input, output, session)
-    get_health_care_server_functions(input, output, session)
+    get_healthcare_server_functions(input, output, session)
 
 
 app = App(app_ui, server)
