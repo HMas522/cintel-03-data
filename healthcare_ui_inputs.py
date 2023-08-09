@@ -30,7 +30,7 @@ def get_mtcars_inputs():
                 ui.tags.li("USD: Currency US dollar"),
                 ui.tags.li("Life_Expectancy: Year of Passing"),
             ),
-            ui.output_table("cars_table"),
+            ui.output_table("healthcare_table"),
         ),
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
