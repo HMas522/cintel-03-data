@@ -29,13 +29,12 @@ logger, logname = setup_logger(__name__)
 # Get a path object representing this data folder.
 data_folder = pathlib.Path(__file__).parent
 
-penguins_df = sns.load_dataset("healthcare")
-penguins_df.to_excel(data_folder.joinpath("healthexp.csv"))
-penguins_df.to_csv(data_folder.joinpath("healthexp.csv"))
-
-tips_df = sns.load_dataset("tips")
+tips_df = pd.read_csv(data_folder.joinpath("tips.csv"))
 tips_df.to_excel(data_folder.joinpath("tips.xlsx"))
-tips_df.to_csv(data_folder.joinpath("tips.csv"))
+
+healthexp_df = pd.read_csv(data_folder.joinpath("healthexp.csv"))
+healthexp_df.to_excel(data_folder.joinpath("healthexp.xlsx"))
+
 
 # url="https://webpath/to/your/data.csv"
 # df=pd.read_csv(url)
