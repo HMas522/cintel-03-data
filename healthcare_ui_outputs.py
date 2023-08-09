@@ -1,5 +1,5 @@
 """
-Purpose: Display outputs for MT Cars dataset.
+Purpose: Display outputs for Health Care dataset.
 
 Choose the correct ui method for the type of output you want to display.
 Provide the exact name of the server function that will provide the output.

@@ -1,5 +1,5 @@
 """
-Purpose: Provide user interaction options for the MT Cars dataset.
+Purpose: Provide user interaction options for the Health Care dataset.
 
 IDs must be unique. They are capitalized in this app for clarity (not typical).
 The IDs are case-sensitive and must match the server code exactly.
@@ -9,7 +9,7 @@ Preface IDs with the dataset name to avoid naming conflicts.
 from shiny import ui
 
 
-def get_mtcars_inputs():
+def get_healthcare_inputs():
     return ui.panel_sidebar(
         ui.h2("Health Care Interaction"),
         ui.tags.hr(),
