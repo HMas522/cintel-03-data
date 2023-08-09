@@ -27,7 +27,6 @@ def get_penguins_inputs():
         ui.input_numeric("Spending_USD", "Max Spending_USD (dollars):", value=10000),
         ui.input_checkbox("HealthCare_Country_Germany", "Germany", value=True),
         ui.input_checkbox("HealthCare_Country_France", "France", value=True),
-        ui.input_checkbox("HealthCare_Country_Great_Britian", "Great Britian", value=True),
         ui.input_checkbox("HealthCare_Country_Japan", "USA", value=True),
         ui.input_checkbox("HealthCare_Country_Canada", "Canada", value=True
         ),
