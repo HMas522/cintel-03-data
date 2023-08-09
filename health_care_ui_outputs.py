@@ -13,10 +13,10 @@ def get_health_care_outputs():
         ui.h2("Main Panel with Reactive Output"),
         ui.tags.hr(),
         ui.tags.section(
-            ui.h3("health_care: Seaborn Scatter Plot (filtered by Body Mass)"),
+            ui.h3("health_care: Seaborn Scatter Plot (filtered by Spending_USD)"),
             ui.output_plot("health_care_scatterplot1"),
             ui.tags.hr(),
-            ui.h3("Filtered health_care Table (filtered by Body Mass)"),
+            ui.h3("Filtered health_care Table (filtered by Spending_USD)"),
             ui.output_text("health_care_filtered_record_count_string"),
             ui.output_table("health_care_filtered_table"),
             ui.tags.hr(),

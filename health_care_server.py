@@ -111,7 +111,7 @@ def get_health_care_server_functions(input, output, session):
         df = original_df
 
         # Drop the 'Unnamed' index column
-        df = df.drop(columns=["Unnamed: 0"])
+        df = df.drop(columns=["Year"])
 
         sns.set_theme(style="ticks")
         pairplot_grid = sns.pairplot(df, hue="Country")
