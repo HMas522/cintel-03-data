@@ -15,25 +15,23 @@ from shiny import ui
 
 def get_penguins_inputs():
     return ui.panel_sidebar(
-        ui.h2("Penguins Interaction"),
+        ui.h2("Health CAre Interaction"),
         ui.tags.hr(),
         ui.input_slider(
-            "PENGUIN_BODY_MASS_RANGE",
-            "Body Mass (g)",
-            min=2700,
-            max=6300,
-            value=[2700, 6300],
+            "Life_Expectancy_RANGE",
+            "Life_Expectancy (years)",
+            min=70,
+            max=90,
+            value=[70, 90],
         ),
-        ui.input_numeric("PENGUIN_MAX_BILL", "Max Bill Length (mm):", value=60.0),
-        ui.input_checkbox("PENGUIN_SPECIES_Adelie", "Adelie", value=True),
-        ui.input_checkbox("PENGUIN_SPECIES_Chinstrap", "Chinstrap", value=True),
-        ui.input_checkbox("PENGUIN_SPECIES_Gentoo", "Gentoo", value=True),
-        ui.input_radio_buttons(
-            "PENGUIN_GENDER",
-            "Select Genders",
-            {"a": "All (includes missing values)", "f": "Female", "m": "Male"},
-            selected="a",
+        ui.input_numeric("Spending_USD", "Max Spending_USD (dollars):", value=10000),
+        ui.input_checkbox("HealthCare_Country_Germany", "Germany", value=True),
+        ui.input_checkbox("HealthCare_Country_France", "France", value=True),
+        ui.input_checkbox("HealthCare_Country_Great_Britian", "Great Britian", value=True),
+        ui.input_checkbox("HealthCare_Country_Japan", "USA", value=True),
+        ui.input_checkbox("HealthCare_Country_Canada", "Canada", value=True
         ),
+        
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),
