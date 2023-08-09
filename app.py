@@ -17,7 +17,7 @@ from tips_ui_outputs import get_tips_outputs
 
 from healthcare_server import get_healthcare_server_functions
 from healthcare_ui_inputs import get_healthcare_inputs
-from health_are_ui_outputs import get_healthcare_outputs
+from healthcare_ui_outputs import get_healthcare_outputs
 
 from util_logger import setup_logger
 
