@@ -31,16 +31,9 @@ data_folder = pathlib.Path(__file__).parent
 
 url="https://github.com/mwaskom/seaborn-data/blob/master/tips.csv"
 tips_df_df=pd.read_csv('https://github.com/mwaskom/seaborn-data/blob/master/iris.csv')
-tips_df = sns.load_dataset("tips")
-tips_df.to_excel(data_folder.joinpath("tips.xlsx"))
-tips_df.to_csv(data_folder.joinpath("tips.csv"))
 
 url="https://github.com/mwaskom/seaborn-data/blob/master/healthexp.csv"
 healthexp_df=pd.read_csv('https://github.com/mwaskom/seaborn-data/blob/master/iris.csv')
-healthexp_df = sns.load_dataset("healthexp")
-healthexp_df.to_excel(data_folder.joinpath("healthexp.xlsx"))
-healthexp_df.to_csv(data_folder.joinpath("healthexp.csv"))
-
 
 
 # url="https://webpath/to/your/data.csv"
