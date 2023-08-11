@@ -1,5 +1,5 @@
 """
-Purpose: Display outputs for Tips dataset.
+Purpose: Display outputs for Tips output dataset.
 
 Choose the correct ui method for the type of output you want to display.
 Provide the exact name of the server function that will provide the output.
