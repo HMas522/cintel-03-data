@@ -21,7 +21,7 @@ from util_logger import setup_logger
 logger, logname = setup_logger(__name__)
 
 
-def get_mtcars_server_functions(input, output, session):
+def get_tips_server_functions(input, output, session):
     """Define functions to create UI outputs."""
 
     p = pathlib.Path(__file__).parent.joinpath("data").joinpath("tips.csv")
