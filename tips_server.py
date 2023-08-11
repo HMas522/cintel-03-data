@@ -1,5 +1,5 @@
 """ 
-Purpose: Provide reactive output for MT Cars dataset.
+Purpose: Provide reactive output for Tips dataset.
 
 Matching the IDs in the UI Sidebar and function/output names in the UI Main Panel
 to this server code is critical. They are case sensitive and must match exactly.
