@@ -19,9 +19,9 @@ from penguins_server import get_penguins_server_functions
 from penguins_ui_inputs import get_penguins_inputs
 from penguins_ui_outputs import get_penguins_outputs
 
-from iris_server import get_iris_server_functions
-from iris_ui_inputs import get_iris_inputs
-from iris_ui_outputs import get_iris_outputs
+from tips_server import get_tips_server_functions
+from tips_ui_inputs import get_tips_inputs
+from tips_ui_outputs import get_tips_outputs
 
 from util_logger import setup_logger
 
@@ -79,10 +79,10 @@ app_ui = ui.page_navbar(
         ),
     ),
     ui.nav(
-        "Iris",
+        "Tips",
         ui.layout_sidebar(
-            get_iris_inputs(),
-            get_iris_outputs(),
+            get_tips_inputs(),
+            get_tips_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/Hmas522")),
@@ -114,7 +114,7 @@ def server(input, output, session):
 
     get_mtcars_server_functions(input, output, session)
     get_penguins_server_functions(input, output, session)
-    get_iris_server_functions(input, output, session)
+    get_tips_server_functions(input, output, session)
 
 
 app = App(app_ui, server)
