@@ -15,10 +15,6 @@ from tips_server import get_tips_server_functions
 from tips_ui_inputs import get_tips_inputs
 from tips_ui_outputs import get_tips_outputs
 
-from healthcare_server import get_healthcare_server_functions
-from healthcare_ui_inputs import get_healthcare_inputs
-from healthcare_ui_outputs import get_healthcare_outputs
-
 from util_logger import setup_logger
 
 logger, logname = setup_logger(__name__)
