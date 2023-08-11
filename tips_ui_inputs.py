@@ -9,7 +9,7 @@ Preface IDs with the dataset name to avoid naming conflicts.
 from shiny import ui
 
 
-def get_mtcars_inputs():
+def get_tips_inputs():
     return ui.panel_sidebar(
         ui.h2("Tips Interaction"),
         ui.tags.hr(),

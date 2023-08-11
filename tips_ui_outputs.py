@@ -8,7 +8,7 @@ from shiny import ui
 from shinywidgets import output_widget
 
 
-def get_mtcars_outputs():
+def get_tips_outputs():
     return ui.panel_main(
         ui.h2("Main Panel with Reactive Output"),
         ui.tags.hr(),
