@@ -11,9 +11,13 @@ Each Shiny app has two parts:
 import shinyswatch
 from shiny import App, ui, render
 
-from tips_server import get_tips_server_functions
-from tips_ui_inputs import get_tips_inputs
-from tips_ui_outputs import get_tips_outputs
+from mtcars_server import get_mtcars_server_functions
+from mtcars_ui_inputs import get_mtcars_inputs
+from mtcars_ui_outputs import get_mtcars_outputs
+
+from penguins_server import get_penguins_server_functions
+from penguins_ui_inputs import get_penguins_inputs
+from penguins_ui_outputs import get_penguins_outputs
 
 from util_logger import setup_logger
 
@@ -41,7 +45,10 @@ app_ui = ui.page_navbar(
                 ui.tags.hr(),
                 ui.tags.ul(
                     ui.tags.li(
-                        "To explore Restaurant Tip dataset, click the 'Tips' tab."
+                        "To explore MotorTrend Car dataset, click the 'MT_Cars' tab."
+                    ),
+                    ui.tags.li(
+                        "To explore the Penguins Dataset, click the 'Penguins' tab."
                     ),
                 ),
                 ui.tags.hr(),
@@ -54,18 +61,25 @@ app_ui = ui.page_navbar(
         ),
     ),
     ui.nav(
-        "Tips",
+        "MT_Cars",
         ui.layout_sidebar(
-            get_tips_inputs(),
-            get_tips_outputs(),
+            get_mtcars_inputs(),
+            get_mtcars_outputs(),
         ),
     ),
-    ui.nav(ui.a("About", href="https://github.com/HMas522")),
-    ui.nav(ui.a("GitHub", href="https://github.com/HMas522/cintel-03-data")),
-    ui.nav(ui.a("App", href="https://HMas522.shinyapps.io/cintel-03-data/")),
+    ui.nav(
+        "Penguins",
+        ui.layout_sidebar(
+            get_penguins_inputs(),
+            get_penguins_outputs(),
+        ),
+    ),
+    ui.nav(ui.a("About", href="https://github.com/Hmas522")),
+    ui.nav(ui.a("GitHub", href="https://github.com/Hmas522/cintel-03-data")),
+    ui.nav(ui.a("App", href="https://Hmas522.shinyapps.io/cintel-03-data/")),
     ui.nav(ui.a("Examples", href="https://shinylive.io/py/examples/")),
     ui.nav(ui.a("Themes", href="https://bootswatch.com/")),
-    title=ui.h1("HMas522 Dashboard"),
+    title=ui.h1("Hmas522 Dashboard"),
 )
 
 
@@ -87,8 +101,8 @@ def server(input, output, session):
         language_string = f"You like {answer}. That takes {count} characters"
         return language_string
 
-    logger.info("Starting server...")
-    get_tips_server_functions(input, output, session)
+    get_mtcars_server_functions(input, output, session)
+    get_penguins_server_functions(input, output, session)
 
 
 app = App(app_ui, server)
