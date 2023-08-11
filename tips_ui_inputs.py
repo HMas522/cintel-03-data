@@ -35,12 +35,6 @@ def get_mtcars_inputs():
             ),
         ui.output_table("tips_table"),
         ),
-        ui.input_radio_buttons(
-            "Server_GENDER",
-            "Select Genders",
-            {"a": "All (includes missing values)", "f": "Female", "m": "Male"},
-            selected="a",
-        ),
         ui.tags.hr(),
         ui.p("🕒 Please be patient. Outputs may take a few seconds to load."),
         ui.tags.hr(),

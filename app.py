@@ -47,9 +47,6 @@ app_ui = ui.page_navbar(
                     ui.tags.li(
                         "To explore Restaurant Tip dataset, click the 'Tips' tab."
                     ),
-                    ui.tags.li(
-                        "To explore the Health Care Dataset, click the 'Health_Care' tab."
-                    ),
                 ),
                 ui.tags.hr(),
                 ui.h2("Main Panel with Reactive Output"),
@@ -65,13 +62,6 @@ app_ui = ui.page_navbar(
         ui.layout_sidebar(
             get_tips_inputs(),
             get_tips_outputs(),
-        ),
-    ),
-    ui.nav(
-        "Health Care",
-        ui.layout_sidebar(
-            get_healthcare_inputs(),
-            get_healthcare_outputs(),
         ),
     ),
     ui.nav(ui.a("About", href="https://github.com/HMas522")),
@@ -101,8 +91,8 @@ def server(input, output, session):
         language_string = f"You like {answer}. That takes {count} characters"
         return language_string
 
+    logger.info("Starting server...")
     get_tips_server_functions(input, output, session)
-    get_healthcare_server_functions(input, output, session)
 
 
 app = App(app_ui, server)
