@@ -33,7 +33,7 @@ penguins_df = sns.load_dataset("penguins")
 penguins_df.to_excel(data_folder.joinpath("penguins.xlsx"))
 penguins_df.to_csv(data_folder.joinpath("penguins.csv"))
 
-tips_df = pd.read_excel(r'C:/Users/Hayley/cintel-03-data/data/tips.xlsx')
+tips_df = pd.read_excel(r'C:\Users\Hayley\cintel-03-data\data\tips.xlsx')
 tips_df.to_excel(data_folder.joinpath("tips.xlsx"))
 
 mtcars_df = pd.read_csv(data_folder.joinpath("mtcars.csv"))
