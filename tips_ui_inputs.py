@@ -13,14 +13,6 @@ def get_tips_inputs():
     return ui.panel_sidebar(
         ui.h2("Tips Interaction"),
         ui.tags.hr(),
-        ui.input_slider(
-            "Tips_dollar_RANGE",
-            "Tips (USD)",
-            min=10,
-            max=35,
-            value=[10, 35],
-        ),
-        ui.tags.hr(),
         ui.tags.section(
             ui.h3("Tips Table"),
             ui.tags.p("Description of each field in the table:"),

@@ -36,24 +36,9 @@ def get_tips_server_functions(input, output, session):
         logger.debug(f"filter message: {message}")
         return message
 
-    @output
-    @render.plot
-    def tips_plot():
-        """
-        Use Seaborn to make a quick scatterplot.
-        Provide a pandas DataFrame and the names of the columns to plot.
-        Learn more at https://stackabuse.com/seaborn-scatter-plot-tutorial-and-examples/
-        """
-        plt = sns.scatterplot(
-            data=original_df,
-            x="tip",
-            y="total_bill",
-        )
-        return plt
 
     # return a list of function names for use in reactive outputs
     return [
         tips_table,
         tips_record_count_string,
-        tips_plot,
     ]

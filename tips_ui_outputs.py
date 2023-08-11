@@ -12,9 +12,6 @@ def get_tips_outputs():
         ui.h2("Main Panel with Output (Not Yet Reactive)"),
         ui.tags.hr(),
         ui.tags.section(
-            ui.h3("Tips Chart (Seaborn Scatter Plot)"),
-            ui.output_plot("tips_plot"),
-            ui.tags.hr(),
             ui.h3("Tips Table"),
             ui.output_text("tips_record_count_string"),
             ui.output_table("tips_table"),
