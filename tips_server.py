@@ -78,7 +78,7 @@ def get_mtcars_server_functions(input, output, session):
 
     @output
     @render.plot
-    def mtcars_plot1():
+    def tips_plot1():
         df = reactive_df.get()
         matplotlib_fig, ax = plt.subplots()
         plt.title("MT Cars with matplotlib")
@@ -87,7 +87,7 @@ def get_mtcars_server_functions(input, output, session):
 
     @output
     @render.plot
-    def mtcars_plot2():
+    def tips_plot2():
         df = reactive_df.get()
         plotnine_plot = (
             ggplot(df, aes("total_bill", "tip"))
