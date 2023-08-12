@@ -1,5 +1,5 @@
 """ 
-Purpose: Provide reactive output for the MT Cars dataset.
+Purpose: Provide reactive output for the Tips dataset.
 
 - Use inputs from the UI Sidebar to filter the dataset.
 - Update reactive outputs in the UI Main Panel.
