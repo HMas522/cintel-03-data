@@ -68,7 +68,7 @@ def get_tips_server_functions(input, output, session):
     def tips_plot2():
         df = reactive_df.get()
         plotnine_plot = (
-            ggplot(df, aes("time", "time"))
+            ggplot(df, aes("time", "tip"))
             + geom_point()
             + ggtitle("Tips with plotnine")
         )
