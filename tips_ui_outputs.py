@@ -13,10 +13,6 @@ def get_tips_outputs():
         ui.h2("Main Panel with Reactive Output"),
         ui.tags.hr(),
         ui.tags.section(
-            ui.h3("Filtered Tips: Charts"),
-            output_widget("tips_output_widget1"),
-            ui.output_plot("tips_plot1"),
-            ui.output_plot("tips_plot2"),
             ui.tags.hr(),
             ui.h3("Filtered Tips Table"),
             ui.output_text("tips_record_count_string"),
