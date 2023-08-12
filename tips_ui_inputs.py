@@ -1,5 +1,5 @@
 """
-Purpose: Provide user interaction options for Tips dataset.
+Purpose: Provide user interaction options for the MT Cars dataset.
 
 IDs must be unique. They are capitalized in this app for clarity (not typical).
 The IDs are case-sensitive and must match the server code exactly.
@@ -11,7 +11,15 @@ from shiny import ui
 
 def get_tips_inputs():
     return ui.panel_sidebar(
-        ui.h2("Tips Interaction"),
+        ui.h2("MT Cars Interaction"),
+        ui.tags.hr(),
+        ui.input_slider(
+            "MTCARS_MPG_RANGE",
+            "Miles Per Gallon (MPG)",
+            min=10,
+            max=35,
+            value=[10, 35],
+        ),
         ui.tags.hr(),
         ui.tags.section(
             ui.h3("Tips Table"),
