@@ -1,20 +1,26 @@
 """
-Purpose: Display outputs for Tips output dataset.
+Purpose: Display output for MT Cars dataset.
 
-Choose the correct ui method for the type of output you want to display.
-Provide the exact name of the server function that will provide the output.
+@imports shiny.ui as ui
+@imports shinywidgets.output_widget for interactive charts
 """
 from shiny import ui
+from shinywidgets import output_widget
 
 
 def get_tips_outputs():
     return ui.panel_main(
-        ui.h2("Main Panel with Output (Not Yet Reactive)"),
+        ui.h2("Main Panel with Reactive Output"),
         ui.tags.hr(),
         ui.tags.section(
-            ui.h3("Tips Table"),
+            ui.h3("Filtered Tips: Charts"),
+            output_widget("tips_output_widget1"),
+            ui.output_plot("tips_plot1"),
+            ui.output_plot("tips_plot2"),
+            ui.tags.hr(),
+            ui.h3("Filtered Tips Table"),
             ui.output_text("tips_record_count_string"),
-            ui.output_table("tips_table"),
+            ui.output_table("tips_filtered_table"),
             ui.tags.hr(),
         ),
     )
