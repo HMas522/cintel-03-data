@@ -31,6 +31,28 @@ def get_tips_server_functions(input, output, session):
 
     reactive_df = reactive.Value()
 
+    @reactive.Effect
+    @reactive.event(input.Tips_USD_RANGE)
+    def _():
+        df = original_df.copy()
+
+        input_range = input.Tips_USD_RANGE()
+        input_min = input_range[0]
+        input_max = input_range[1]
+
+        """
+        Filter the dataframe to just those greater than or equal to the min
+        and less than or equal to the max
+        Note: The ampersand (&) is the Python operator for AND
+        The column name is in quotes and is "mpg".
+        You must be familiar with the dataset to know the column names.
+        """
+
+        filtered_df = df[(df["tip"] >= input_min) & (df["tip"] <= input_max)]
+
+        # Set the reactive value
+        reactive_df.set(filtered_df)
+
     @output
     @render.text
     def tips_record_count_string():
@@ -50,7 +72,7 @@ def get_tips_server_functions(input, output, session):
     @render_widget
     def tips_output_widget1():
         df = reactive_df.get()
-        plotly_express_plot = px.scatter(df, x="total_bill", y="tip", color="time", size="sex")
+        plotly_express_plot = px.scatter(df, x="total_bill", y="tip", color="sex", size="time")
         plotly_express_plot.update_layout(title="Tips with Plotly Express")
         return plotly_express_plot
 
@@ -60,7 +82,7 @@ def get_tips_server_functions(input, output, session):
         df = reactive_df.get()
         matplotlib_fig, ax = plt.subplots()
         plt.title("Tips with matplotlib")
-        ax.scatter(df["time"], df["tip"])
+        ax.scatter(df["tip"], df["total_bill"])
         return matplotlib_fig
 
     @output
@@ -68,7 +90,7 @@ def get_tips_server_functions(input, output, session):
     def tips_plot2():
         df = reactive_df.get()
         plotnine_plot = (
-            ggplot(df, aes("time", "tip"))
+            ggplot(df, aes("tip", "total_bill"))
             + geom_point()
             + ggtitle("Tips with plotnine")
         )
